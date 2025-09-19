@@ -1,0 +1,39 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Добавить студента";
+}
+
+<h2>Добавить нового студента</h2>
+
+<form asp-action="Create" method="post" class="form-container">
+    <div class="form-group">
+        <label asp-for="Name" class="form-label">Имя студента:</label>
+        <input asp-for="Name" class="form-control"/>
+        <span asp-validation-for="Name" class="validation-error"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Age" class="form-label">Возраст:</label>
+        <input asp-for="Age" type="number" class="form-control"/>
+        <span asp-validation-for="Age" class="validation-error"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Group" class="form-label">Группа:</label>
+        <input asp-for="Group" class="form-control"/>
+        <span asp-validation-for="Group" class="validation-error"></span>
+    </div>
+
+    <div class="form-actions">
+        <a asp-action="Index" class="btn btn-secondary">
+            Назад к списку
+        </a>
+        <button type="submit" class="btn btn-success">
+            Добавить студента
+        </button>
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,25 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Student details";
+}
+<table>
+    <tr>
+        <td>ID</td>
+        <td>@Model.Id</td>
+    </tr>
+
+    <tr>
+        <td>Имя</td>
+        <td>@Model.Name</td>
+    </tr>
+    
+    <tr>
+        <td>Возраст</td>
+        <td>@Model.Age</td>
+    </tr>
+    <tr>
+        <td>Группа</td>
+        <td>@Model.Group</td>
+    </tr>
+
+</table>
